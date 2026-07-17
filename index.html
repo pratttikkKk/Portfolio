@@ -103,12 +103,27 @@
       }
     </script>
 <style>
+        *, *::before, *::after { box-sizing: border-box; }
+
+        html, body { width: 100%; }
+
         body {
             background-color: #0b0e15;
             color: #e1e2ec;
             overflow-x: hidden;
             scroll-behavior: smooth;
+            text-rendering: optimizeLegibility;
         }
+
+        /* Prevent long content from forcing horizontal scroll */
+        a, p, h1, h2, h3, h4, span { overflow-wrap: anywhere; word-break: break-word; }
+
+        /* Images should never overflow their containers */
+        img { max-width: 100%; height: auto; }
+
+        /* Improve touch target sizing on small screens */
+        button, a { min-height: 44px; }
+
 
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
@@ -180,7 +195,7 @@
 <body class="font-body-md">
 <!-- Top Navigation Bar -->
 <nav class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-md border-b border-white/10 shadow-[0_0_20px_rgba(173,198,255,0.1)]">
-<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto px-4">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto px-4 sm:px-6">
 <div class="font-display text-headline-md font-bold text-primary">PF</div>
 <div class="hidden md:flex gap-8 items-center">
 <a class="font-headline-sm text-label-md text-primary border-b-2 border-primary pb-1" href="#home">Home</a>
@@ -561,6 +576,7 @@ void main() {
 </section>
 <!-- Contact Section -->
 <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto reveal" id="contact">
+<div style="width: min(100%, 500px); margin-left: auto; margin-right: auto;">
 <div class="glass-card p-10 md:p-20 rounded-[3rem] relative overflow-hidden">
 <div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 blur-[150px] -mr-48 -mt-48"></div>
 <div class="grid lg:grid-cols-2 gap-16 relative z-10">
@@ -633,6 +649,9 @@ void main() {
 </div>
 </footer>
 <script>
+        // Prevent accidental horizontal scroll on mobile browsers
+        document.documentElement.style.overflowX = 'hidden';
+        document.body.style.overflowX = 'hidden';
         // Typing Effect
         const typingText = document.getElementById('typing-text');
         const roles = ["Android Developer", "Backend Engineer", "Problem Solver"];
