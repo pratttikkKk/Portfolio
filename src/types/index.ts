@@ -154,6 +154,7 @@ export interface Experience {
   description: string;
   skills: string[];
   type: 'internship' | 'education' | 'certification';
+  projectHref?: string;
 }
 
 export interface Certification {
@@ -171,4 +172,3 @@ export interface NavLink {
   href: string;
   section: string;
 }
-

@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { experiences, timelineEvents } from '@/data/experience';
-import { HiBriefcase, HiAcademicCap, HiCalendar } from 'react-icons/hi';
+import { HiArrowRight, HiBriefcase, HiAcademicCap, HiCalendar } from 'react-icons/hi';
 
 const typeIcons = {
   internship: <HiBriefcase className="w-5 h-5" />,
@@ -49,6 +50,15 @@ export function Experience() {
                       </span>
                     ))}
                   </div>
+                  {exp.projectHref && (
+                    <Link
+                      to={exp.projectHref}
+                      className="inline-flex items-center gap-2 mt-5 text-primary font-label text-sm hover:gap-3 transition-all"
+                    >
+                      View MarketSphere project
+                      <HiArrowRight className="w-4 h-4" />
+                    </Link>
+                  )}
                 </div>
               </ScrollReveal>
             ))}
@@ -138,4 +148,3 @@ export function Experience() {
     </section>
   );
 }
-

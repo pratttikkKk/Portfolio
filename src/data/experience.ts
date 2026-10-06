@@ -2,6 +2,15 @@ import { Experience } from '@/types';
 
 export const experiences: Experience[] = [
   {
+    title: 'Backend Developer Intern',
+    organization: 'Invoqe',
+    period: 'Sep 2026 – Nov 2026 · Ongoing',
+    description: 'Developing backend projects with Node.js, Express.js, MongoDB, and REST APIs. Building MarketSphere, a multi-vendor e-commerce marketplace, and gaining hands-on experience in authentication, authorization, business logic, API development and testing, project documentation, GitHub workflows, and deployment materials.',
+    skills: ['Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'API Testing', 'Authentication & Authorization', 'Business Logic', 'Documentation', 'GitHub Workflows'],
+    type: 'internship',
+    projectHref: '/project/marketsphere',
+  },
+  {
     title: 'Android Developer Virtual Intern',
     organization: 'Google for Developers & EduSkills',
     period: '2023 - Present',
@@ -65,4 +74,3 @@ export const timelineEvents = [
     icon: 'celebration',
   },
 ];
-
