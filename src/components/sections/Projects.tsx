@@ -18,11 +18,13 @@ export function Projects() {
     <section id="projects" className="section-container">
       <ScrollReveal>
         <div className="text-center mb-16">
-          <span className="section-label">Projects</span>
-          <h2 className="section-title">Engineering Case Studies</h2>
+          <span className="section-label">Selected Work · {projects.length} Projects</span>
+          <h2 className="section-title">
+            Ideas built into <span className="gradient-text">real products</span>
+          </h2>
           <p className="section-subtitle mx-auto">
-            Deep dives into real-world engineering challenges. Each project demonstrates 
-            end-to-end development from architecture to deployment.
+            Explore how I bring Android, backend, marketplace, and applied-AI ideas to life.
+            Open a case study for the architecture, decisions, and engineering details.
           </p>
         </div>
       </ScrollReveal>
@@ -43,7 +45,8 @@ export function Projects() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-background/90 via-background/20 to-primary/10" />
+                <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-background/80 to-transparent" />
                 
                 {/* Status Badge */}
                 <div className="absolute top-4 right-4">
@@ -144,4 +147,3 @@ export function Projects() {
     </section>
   );
 }
-

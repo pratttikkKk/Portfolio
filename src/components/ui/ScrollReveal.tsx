@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { ReactNode } from 'react';
 
 interface ScrollRevealProps {
@@ -28,17 +28,18 @@ export function ScrollReveal({
   distance = 60,
   once = true,
 }: ScrollRevealProps) {
-  const initial = directionVariants[direction];
+  const shouldReduceMotion = useReducedMotion();
+  const initial = shouldReduceMotion ? { x: 0, y: 0 } : directionVariants[direction];
 
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, ...initial }}
+      initial={shouldReduceMotion ? false : { opacity: 0, ...initial }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once, margin: '-50px' }}
       transition={{
-        duration,
-        delay,
+        duration: shouldReduceMotion ? 0 : duration,
+        delay: shouldReduceMotion ? 0 : delay,
         ease: [0.25, 0.46, 0.45, 0.94],
       }}
     >
@@ -46,4 +47,3 @@ export function ScrollReveal({
     </motion.div>
   );
 }
-

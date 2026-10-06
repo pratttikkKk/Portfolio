@@ -44,7 +44,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-4 lg:gap-8">
             {navLinks.map((link) =>
               isHomePage ? (
                 <a
@@ -72,7 +72,7 @@ export function Navbar() {
             <a
               href="/pratik-suresh-farate.pdf"
               download="Pratik-Suresh-Farate-Resume.pdf"
-              className="bg-primary text-on-primary font-label text-sm px-6 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all duration-300 inline-flex items-center gap-2"
+              className="bg-primary text-white font-label text-xs lg:text-sm px-3 lg:px-6 py-2.5 rounded-full whitespace-nowrap hover:shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all duration-300 inline-flex items-center gap-2"
             >
               Download Resume
             </a>
@@ -139,4 +139,3 @@ export function Navbar() {
     </nav>
   );
 }
-

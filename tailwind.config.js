@@ -18,7 +18,7 @@ export default {
         'surface-bright': '#363941',
         'on-surface': '#e1e2ec',
         'on-surface-variant': '#c2c6d6',
-        'on-primary': '#002e6a',
+        'on-primary': '#FFFFFF',
         'outline': '#8c909f',
         'outline-variant': '#424754',
       },
@@ -58,4 +58,3 @@ export default {
   },
   plugins: [],
 };
-

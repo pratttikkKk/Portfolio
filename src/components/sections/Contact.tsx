@@ -77,7 +77,7 @@ export function Contact() {
               <a
                 href="/pratik-suresh-farate.pdf"
                 download="Pratik-Suresh-Farate-Resume.pdf"
-                className="bg-primary text-on-primary font-label text-sm px-8 py-4 rounded-full hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] transition-all duration-300 inline-flex items-center gap-2"
+                className="bg-primary text-white font-label text-sm px-8 py-4 rounded-full hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] transition-all duration-300 inline-flex items-center gap-2"
               >
                 <HiDocumentDownload className="w-5 h-5" />
                 Download Resume
@@ -107,4 +107,3 @@ export function Contact() {
     </section>
   );
 }
-

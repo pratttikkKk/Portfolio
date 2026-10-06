@@ -5,6 +5,7 @@ import { Home } from '@/pages/Home';
 import { SmartMechanicCaseStudy } from '@/pages/SmartMechanicCaseStudy';
 import { SAMVEDCaseStudy } from '@/pages/SAMVEDCaseStudy';
 import { MarketSphereCaseStudy } from '@/pages/MarketSphereCaseStudy';
+import { ProdiCaseStudy } from '@/pages/ProdiCaseStudy';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/project/smart-mechanic" element={<SmartMechanicCaseStudy />} />
         <Route path="/project/samved" element={<SAMVEDCaseStudy />} />
         <Route path="/project/marketsphere" element={<MarketSphereCaseStudy />} />
+        <Route path="/project/prodi-ai-manufacturing" element={<ProdiCaseStudy />} />
       </Routes>
       <Footer />
     </div>

@@ -86,7 +86,7 @@ export function SmartMechanicCaseStudy() {
 
             <div className="flex flex-wrap gap-4 mt-8">
               {project.demo && (
-                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="bg-primary text-on-primary font-label text-sm px-8 py-4 rounded-full hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] transition-all duration-300 inline-flex items-center gap-2">
+                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="bg-primary text-white font-label text-sm px-8 py-4 rounded-full hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] transition-all duration-300 inline-flex items-center gap-2">
                   <HiExternalLink className="w-5 h-5" />
                   View Demo
                 </a>
@@ -389,7 +389,7 @@ export function SmartMechanicCaseStudy() {
                   <div className="space-y-4">
                     {group.endpoints.map((endpoint, ei) => (
                       <motion.div
-                        key={endpoint.endpoint}
+                        key={`${endpoint.method}-${endpoint.endpoint}`}
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
@@ -772,4 +772,3 @@ export function SmartMechanicCaseStudy() {
     </div>
   );
 }
-
